@@ -17,8 +17,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'my-credentials-id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     echo "Deploying with username ${env.USERNAME}"
-                    bat 'echo %USERNAME%'
-                    bat 'echo %PASSWORD%'
+                    bat "echo %USERNAME%"
+                    bat "echo %PASSWORD%"
                 }
             }
         }
